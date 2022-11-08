@@ -80,22 +80,39 @@ text-decoration: none;
 <nav>
 <ul>
 <li>
-<button class="button button1">Appointment</button>
+<button class="button button1" id="bu1">Appointment</button>
 </li>
 <li>
-<button class="button button2">Payment</button>
+<button class="button button2" id="bu2">Payment</button>
 </li>
 <li>
-<button class="button button1">Priscription</button>
+<button class="button button1" id="but3">Prescription</button>
 </li>
 <li>
-<button class="button button2">Medicine</button>
+<button class="button button2" id="but4">Medicine</button>
 </li>
 <li>
-<button class="button button3">Sign in</button>
+<button class="button button3" id="but5">Sign in</button>
 </li>
 </ul>
 </nav>
 </header>
 </Body>
+<script>
+  document.getElementById("bu1").onclick=function()
+  {
+    window.open("./index.html");
+  }
+  document.getElementById("bu2").onclick=function()
+  {
+    window.open("./payment.html");
+  }
+
+  document.getElementById("but4").onclick=function()
+  {
+    window.open("./medicine.html");
+  }
+
+</script>
 </Html>
+
