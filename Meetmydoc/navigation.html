@@ -1,0 +1,118 @@
+<!Doctype Html>
+<Html>
+<Head>
+<Title>
+Make a Navigation Bar
+</Title>
+<style type=text/css>
+body
+{
+height: 125vh;
+margin-top: 80px;
+padding: 30px;
+background-size: cover;
+font-family: sans-serif;
+}
+header {
+background-color: white;
+position: fixed;
+left: 0;
+right: 0;
+top: 5px;
+height: 30px;
+display: flex;
+align-items: center;
+box-shadow: 0 0 25px 0 black;
+}
+header * {
+display: inline;
+}
+header li {
+margin: 0px;
+}
+header li a {
+color: blue;
+text-decoration: none;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.8s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 0px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button2 {
+  background-color: white;
+  color: black;
+  border: 0px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+  .button3 {
+
+  color:#008CBA;
+  }
+
+</style>
+</Head>
+<Body>
+<header>
+<nav>
+<ul>
+<li>
+<button class="button button1" id="bu1">Appointment</button>
+</li>
+<li>
+<button class="button button2" id="bu2">Payment</button>
+</li>
+<li>
+<button class="button button1" id="but3">Prescription</button>
+</li>
+<li>
+<button class="button button2" id="but4">Medicine</button>
+</li>
+<li>
+<button class="button button3" id="but5">Sign in</button>
+</li>
+</ul>
+</nav>
+</header>
+</Body>
+<script>
+  document.getElementById("bu1").onclick=function()
+  {
+    window.open("./index.html");
+  }
+  document.getElementById("bu2").onclick=function()
+  {
+    window.open("./payment.html");
+  }
+
+  document.getElementById("but4").onclick=function()
+  {
+    window.open("./medicine.html");
+  }
+
+</script>
+</Html>
+

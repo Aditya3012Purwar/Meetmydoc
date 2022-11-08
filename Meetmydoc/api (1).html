@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html style="height:100% ;">
+    <head>
+
+    </head>
+    <body style="height: 100%;">
+        <div id="map" style="height: 100%;"></div>
+    </body style="height:100%">
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+    <script>
+        let map;
+
+function initMap() {
+  var location = {lat: 20, lng: 75}
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: location,
+    zoom: 8,
+  });
+    var marker = new google.maps.Marker({
+      position: location ,
+      map:map
+    })
+  
+}
+window.initMap = initMap;
+        </script>
+</html>
