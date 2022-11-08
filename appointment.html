@@ -31,21 +31,74 @@
         <div class="mb-3 row my-4">
             <label for="staticEmail" class="col-sm-2 col-form-label">Date For Appointment : </label>
             <div class="col-sm-5">
-              <input type="date" class="form-control input" id="staticEmail" placeholder="Enter Your Name">
+              <input type="date" class="form-control input"  placeholder="Enter Your Name" id="dta">
             </div>
         </div>
         <div class="mb-3 row my-4">
             <label for="staticEmail" class="col-sm-2 col-form-label">Timing For Appointment : </label>
             <div class="col-sm-5">
-              <input type="time" class="form-control input" id="staticEmail" placeholder="Enter Your Name">
+              <input type="time" class="form-control input" placeholder="Enter Your Name" id="time">
             </div>
         </div>
     </form>
     <footer>
         <div class="submission">
-            <button type="button" class="btn btn-success">Confirm Appointment</button>
+            <button type="button" class="btn btn-success" id="can">Confirm Appointment</button>
             <button type="button" class="btn btn-success">Confirm Extension</button>
         </div>
     </footer>
 </body>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+<script>
+   
+
+  
+
+    const firebaseConfig = firebase.initializeApp({
+  apiKey: "AIzaSyAjaeXKJ1wlqzmuMIGHnMwZBCN8DiJ82mI",
+  authDomain: "meetmydoc-55338.firebaseapp.com",
+  projectId: "meetmydoc-55338",
+  storageBucket: "meetmydoc-55338.appspot.com",
+  messagingSenderId: "584519172589",
+  appId: "1:584519172589:web:8a48481091f60444df67e4",
+  measurementId: "G-D6TBF4M90R"
+});
+const db=firebase.firestore();
+let n1=localStorage.getItem("Name");
+let p2=localStorage.getItem("Phone");
+let dd=localStorage.getItem("Date");
+let ee=localStorage.getItem("Email");
+let aa=localStorage.getItem("Address");
+let pr=localStorage.getItem("Problem");
+    document.getElementById("can").onclick=function()
+    {
+        let dateq=document.getElementById("dta").value;
+        let time=document.getElementById("time").value;
+        db.collection("cu").add({
+            Name:n1,
+            Phone:p2,
+            Date:dd,
+            Email:ee,
+            Address:aa,
+            Problem:pr,
+ DateofAppoint:dateq,
+ TimeofAppoint:time
+
+
+})
+.then((docref)=>
+{
+    console.log("Information psuhed");
+    alert("Information sent succesfully");
+})
+.catch((error)=>
+{
+console.log(error)
+}
+)
+        window.open("./appointment.html");
+    }
+</script>
 </html>
