@@ -20,7 +20,7 @@
 
 
 
-	<form method="post" action="generateprescription.php"><big><big>PRESCRIPTION :<br>
+	<form ><big><big>PRESCRIPTION :<br>
 
 	<br>
 
@@ -36,7 +36,7 @@
 
 	</td>
 
-	<td><input name="doc_name" type="text"><br>
+	<td><input name="doc_name" type="text" id="docnam"><br>
 
 	</td>
 
@@ -48,7 +48,7 @@
 
 	</td>
 
-	<td><input name="id" type="text"><br>
+	<td><input name="id" type="text" id="pai"><br>
 
 	</td>
 
@@ -60,7 +60,7 @@
 
 	</td>
 
-	<td><textarea cols="30" rows="3" name="medicine"></textarea><br>
+	<td><textarea cols="30" rows="3" name="medicine" id="medi"></textarea><br>
 
 	</td>
 
@@ -90,7 +90,7 @@
 
 	</td>
 
-	<td><textarea cols="30" rows="3" name="diagnosis"></textarea><br>
+	<td><textarea cols="30" rows="3" name="diagnosis" id="dia"></textarea><br>
 
 	</td>
 
@@ -102,7 +102,7 @@
 
 	</td>
 
-	<td><textarea cols="30" rows="3" name="instructions"></textarea> </td>
+	<td><textarea cols="30" rows="3" name="instructions" id="in"></textarea> </td>
 
 	</tr>
 
@@ -114,7 +114,7 @@
 
 	<br>
 
-	<input name="submit" value="Generate Prescription" type="submit">&nbsp; &nbsp; <input name="reset" value="RESET" type="reset"> <big><big><br>
+	<input name="submit" value="Generate Prescription" type="submit" id="subm">&nbsp; &nbsp; <input name="reset" value="RESET" type="reset"> <big><big><br>
 
 	</big></big></form>
 
@@ -122,5 +122,72 @@
 
 
 	</body>
+	<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+<script>
+   
 
+  
+
+    const firebaseConfig = firebase.initializeApp({
+        apiKey: "AIzaSyAP-f77730LJlm4IofGFNfQX2MAfFXqxnw",
+    authDomain: "meetmydoc-5827a.firebaseapp.com",
+    projectId: "meetmydoc-5827a",
+    storageBucket: "meetmydoc-5827a.appspot.com",
+    messagingSenderId: "474538773803",
+    appId: "1:474538773803:web:95c938b905b5683e7cc96e",
+    measurementId: "G-LW0X9CZTW0"
+});
+const db=firebase.firestore();
+document.getElementById("subm").onclick=function()
+	{
+		let w=document.getElementById("docnam").value;
+		let a=document.getElementById("pai").value;
+		let b=document.getElementById("medi").value;
+		let f=document.getElementById("docnam").value;
+		let o=document.getElementById("dia").value;
+		let l=document.getElementById("in").value;
+		localStorage.setItem("Doctor",w);
+		localStorage.setItem("PaID",a);
+		localStorage.setItem("Medi",b);
+		localStorage.setItem("Dosag",f);
+		localStorage.setItem("Diagonois",o);
+		localStorage.setItem("Addul",l);
+	}
+let s=localStorage.getElementById("Doctor");
+let sr=localStorage.getElementById("PaID");
+let st=localStorage.getElementById("Medi");
+let so=localStorage.getElementById("Dosag");
+let sj=localStorage.getElementById("Diagonois");
+let sb=localStorage.getElementById("Addul");
+    document.getElementById("subm").onclick=function()
+    {
+        
+        db.collection("cu").add({
+         
+ Doctor:s,
+ PatientID:sr,
+ Medicine:st,
+ Dosage:st,
+ Diagonosis:sj,
+ Adtional:sb
+
+
+})
+.then((docref)=>
+{
+    console.log("Information psuhed");
+    alert("Information sent succesfully");
+})
+.catch((error)=>
+{
+console.log(error)
+}
+)
+        window.open("./appointment.html");
+    }
+
+	
+</script>
 	</html>

@@ -72,6 +72,12 @@ let dd=localStorage.getItem("Date");
 let ee=localStorage.getItem("Email");
 let aa=localStorage.getItem("Address");
 let pr=localStorage.getItem("Problem");
+let s=localStorage.getElementById("Doctor");
+let sr=localStorage.getElementById("PaID");
+let st=localStorage.getElementById("Medi");
+let so=localStorage.getElementById("Dosag");
+let sj=localStorage.getElementById("Diagonois");
+let sb=localStorage.getElementById("Addul");
     document.getElementById("can").onclick=function()
     {
         let dateq=document.getElementById("dta").value;
@@ -84,7 +90,13 @@ let pr=localStorage.getItem("Problem");
             Address:aa,
             Problem:pr,
  DateofAppoint:dateq,
- TimeofAppoint:time
+ TimeofAppoint:time,
+ Doctor:s,
+ PatientID:sr,
+ Medicine:st,
+ Dosage:st,
+ Diagonosis:sj,
+ Adtional:sb
 
 
 })

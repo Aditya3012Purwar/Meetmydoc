@@ -12,11 +12,9 @@
     ></script>
     <script>
         let map;
-        let r=localStorage.getItem("a");
-  let j=localStorage.getItem("b");
+      
 function initMap() {
-  
-  var location = {lat: r, lng: j}
+  var location = {lat: 10, lng: 20}
   map = new google.maps.Map(document.getElementById("map"), {
     center: location,
     zoom: 8,
