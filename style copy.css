@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+::-webkit-input-placeholder{
+    text-align: center;
+    opacity: 0.8;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black
+}
+#doc{
+    height:100vh;
+    width:100vw;
+}
+.search-doctor{
+    position:absolute;
+    bottom: 6rem;
+    right:19rem;
+    margin-top: 13rem;
+    line-height:2rem;
+}
+#search-form{
+    font-size:25px;
+    border-radius: 50px;
+    width: 12rem;
+    height: 66px;
+    text-align:center;
+    color: black;
+    font-weight: 5rem;
+    position: relative;
+    left:5rem;
+    /* background:linear-gradient(orange,lightblue,WHITE); */
+    /* background: rgb(63,74,83); */
+/* background: linear-gradient(90deg, rgba(63,74,83,1) 0%, rgba(93,90,90,1) 33%, rgba(83,71,71,1) 61%, rgba(52,52,52,1) 90%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%, rgba(7,124,151,1) 100%); */
+
+border-color: grey top repeat;
+}
+#search-form:focus::placeholder{
+    color:transparent;
+}
+
+/* #submit-button{
+    display: none;
+} */
+
+.container{
+    position: absolute;
+    top:5rem;
+    left:5rem;
+    height: 33rem;
+    width:52rem;
+    background-color: white;
+    border-radius:2rem;
+
+}
+.doctors{
+    position: absolute;
+    height:13rem;
+    left: 1rem;
+}
+
+.doct-bg{
+    height:100vh;
+    width:100vw;
+}
+#doct-sec1{
+    position: absolute;
+    /* height:15rem; */
+    background-color: #2478BE;
+    width: 15rem;
+    top:5%;
+    right:3rem;
+    border-radius:2rem;
+}
+#doct-sec2{
+    position: absolute;
+    /* height:10rem; */
+    background-color: #45DEEE;
+    width: 15rem;
+    top: 58%;
+    right:3rem;
+    border-radius:2rem;
+}
+#doct-sec3{
+    position: absolute;
+    /* height:10rem; */
+    background-color: #2478BE;
+    width: 15rem;
+    top: 112%;
+    right:3rem;
+    border-radius:2rem;
+}
+
+#doct-sec4{
+    position: absolute;
+    /* height:10rem; */
+    background-color: #45DEEE;
+    width: 15rem;
+    top: 166%;
+    right:3rem;
+    border-radius:2rem;
+}
+#doct-sec5{
+    position: absolute;
+    /* height:10rem; */
+    background-color: #2478BE;
+    width: 15rem;
+    top: 219%;
+    right:3rem;
+    border-radius:2rem;
+}
+
+
+.block-border{
+    height:100%;
+    position: absolute;
+    top : 22px;
+    right:0.8rem;
+    height:92%;
+    border-radius:2rem;
+}
+
+.showmap{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: 90%;
+    width: 59%;
+    border-radius:2rem;
+}
+
+.doctors-name{
+
+    position: relative;
+    text-align: center;
+    top: 43%;
+    line-height: 1.2;
+}
+
+.doctor-section{
+    background-color:white;
+    position:absolute;
+    height:80%;
+    width: 18rem;
+    top: 3rem;
+    right:1rem;
+    overflow: scroll;
+}
+
+.doctors-image{
+    position:absolute;
+    height:5rem;
+    width:5rem;
+    left:34%;
+    border-radius:1rem;
+    top:20px;
+
+}
+.whitec{
+    color: white;
+}
+.blackc{
+    color:black;
+}
