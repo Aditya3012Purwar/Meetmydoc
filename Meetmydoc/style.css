@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient( to bottom left, rgb(0, 0, 79), rgb(33, 33, 33));
+    background-size:100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.row{
+    --bs-gutter-x: 0rem;
+}
+
+#form{
+    height: 400px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+/* Navbar Css */
+
+#nav{
+    position: sticky;
+    width: 100%;
+    background-color: rgb(45, 45, 45);
+}
+
+
+.navbar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav .logo img{
+    width: 80px;
+    height: 80px;
+}
+
+#nav .navbar .nav{
+    font-size: 1.3rem;
+    list-style: none;
+    width: 50%;
+    display: flex;
+    justify-content:space-evenly ;
+}
+#nav .navbar .nav .navitems{
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px rgba(253, 253, 253, 0.395);
+}
+#nav .navbar #search{
+    padding: 17px;
+}
+
+#nav .navbar #search input{
+    font-size: 1rem;
+    padding: 3px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    margin: 4px;
+}
+
+#nav .navbar #search #search-btn{
+    font-size: 1rem;
+    padding: 3px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+.submit{
+    width: 100px;
+    margin: auto;
+}
