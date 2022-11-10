@@ -83,7 +83,7 @@ text-decoration: none;
 <button class="button button1" id="bu1">Appointment</button>
 </li>
 <li>
-<button class="button button2" id="bu2">Payment</button>
+<button class="button button2" id="bu2">Doctor Search</button>
 </li>
 <li>
 <button class="button button1" id="but3">Prescription</button>
@@ -103,11 +103,18 @@ text-decoration: none;
   {
     window.open("./index.html");
   }
+  document.getElementById("but3").onclick=function()
+  {
+    window.open("hi.html");
+  }
   document.getElementById("bu2").onclick=function()
   {
     window.open("./payment.html");
   }
-
+  document.getElementById("bu2").onclick=function()
+  {
+    window.open("./showmap copy.html");
+  }
   document.getElementById("but4").onclick=function()
   {
     window.open("./medicine.html");
@@ -116,6 +123,7 @@ text-decoration: none;
   {
     window.open("./dashboard.html");
   }
+  
 
 </script>
 </Html>
